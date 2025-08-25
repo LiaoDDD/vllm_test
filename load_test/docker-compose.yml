@@ -1,0 +1,8 @@
+services:
+  tester:
+    image: python:3.10-slim
+    container_name: vllm-tester
+    working_dir: /app
+    volumes:
+      - ./load_test:/app   # 把你本機的 load_test 資料夾掛進 container
+    command: tail -f /dev/null  
